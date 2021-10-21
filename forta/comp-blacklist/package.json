@@ -1,7 +1,7 @@
 {
   "name": "comp-blacklist-1-agent",
   "version": "0.0.1",
-  "repository": "https://github.com/Northa/cosmosHUB_sripts/tree/main/forta",
+  "repository": "https://github.com/Northa/cosmosHUB_sripts/tree/main/forta/comp-blacklist",
   "description": "Forta Agent comp-blacklist-1",
   "scripts": {
     "postinstall": "python3 -m pip install -r requirements_dev.txt",
