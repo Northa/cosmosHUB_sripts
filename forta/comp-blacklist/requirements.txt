@@ -1,0 +1,2 @@
+forta_agent>=0.0.6
+requests==2.26.0
