@@ -32,8 +32,8 @@ The agent behaviour can be verified with the following transactions:
 
 ###### Examples
 
-<<<<<<< HEAD
 `$ npm run tx 0xb4f894f692681d7773551761d2e96af8e5b072de968a6d2a3f29cde4c59e4fb4`
 
 `$ npm run block 13463656`
 
+![test](https://raw.githubusercontent.com/Northa/cosmosHUB_sripts/main/forta/comp-blacklist/screen/screen1.png)
