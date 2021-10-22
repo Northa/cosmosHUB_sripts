@@ -2,7 +2,7 @@
 
 ## Description
 
-This agent detects transactions from blacklisted addresses to Compound contract
+This agent detects transactions from blacklisted addresses to Compound Comptroller contract
 
 ## Supported Chains
 
@@ -11,9 +11,13 @@ This agent detects transactions from blacklisted addresses to Compound contract
 ## Alerts
 
 - COMP-blacklist-1
-  - Severity is always set to "Critical". We don't want to deal with scammers/phishers!
-  - Type is always set to "Suspicious"
-  - Metadata "gas_used" field contains amount of gas used
+  - name "Blacklisted alert"
+  - description "INFO {addr} {comment when and where addr was involved in fraud}"
+  - alert_id "COMP-blacklist-1"
+  - type is always set to "Suspicious"
+  - severity is always set to "Critical". We don't want to deal with scammers/phishers!
+  - metadata "gas_used" field contains amount of gas used
+
 
 ## Test Data
 
@@ -22,11 +26,14 @@ This agent detects transactions from blacklisted addresses to Compound contract
 
 The agent behaviour can be verified with the following transactions:
 
-- 0xa6a9a16107976125ff0cb5f141dd99bc68d351f6798fcec2e2924529f10def2a block 13460264
-- 0x009feaa0d726d1a88433d6e3b8c8cb247636f2f0f0b7ead0b685802a62a2f8c8 block 13460200
+- 0x1b5badbb20dc6d990c98dec20c2fe1937c46ae1cf73db753902e4387db50d415 block 13464199
+- 0xd5ee4032f670e12f1696c99c8c80dc87e89bbb99ed7b11a7e2e98ed08a2f0797 block 13464516
+- 0xb4f894f692681d7773551761d2e96af8e5b072de968a6d2a3f29cde4c59e4fb4 block 13463656
 
 ###### Examples
 
-`$ npm run tx 0xa6a9a16107976125ff0cb5f141dd99bc68d351f6798fcec2e2924529f10def2a`
+<<<<<<< HEAD
+`$ npm run tx 0xb4f894f692681d7773551761d2e96af8e5b072de968a6d2a3f29cde4c59e4fb4`
 
-`$ npm run block 13460264`
+`$ npm run block 13463656`
+

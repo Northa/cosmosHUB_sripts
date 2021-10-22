@@ -1,7 +1,7 @@
 import requests
 from json import loads
 from forta_agent import Finding, FindingType, FindingSeverity
-from .config import COMPOUND_TOKEN_ADDRESS, DARKLIST, TEST_ADDRS
+from .config import COMPOUND_COMPTROLLER_ADDRESS, DARKLIST, TEST_ADDRS
 
 
 def get_blacklisted() -> list:
@@ -18,7 +18,7 @@ def handle_transaction(transaction_event) -> list:
     Else check whether the sender's address on the blacklist
     """
     findings = []
-    if transaction_event.to != COMPOUND_TOKEN_ADDRESS:
+    if transaction_event.to != COMPOUND_COMPTROLLER_ADDRESS:
         return findings
 
     BLACKLISTED = get_blacklisted()
@@ -27,7 +27,7 @@ def handle_transaction(transaction_event) -> list:
 
         if addr['address'].lower() == transaction_event.from_:
             findings.append(Finding({
-                'name': 'Blacklisted address found!',
+                'name': 'Blacklisted alert',
                 'description': f"INFO: {addr['address']} {addr['comment']}",
                 'alert_id': 'COMP-blacklist-1',
                 'type': FindingType.Suspicious,

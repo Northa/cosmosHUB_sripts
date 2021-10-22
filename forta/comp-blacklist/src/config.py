@@ -9,12 +9,16 @@ DARKLIST = f"https://raw.githubusercontent.com/MyEtherWallet/" \
 
 
 TEST_ADDRS = [{
-    "address": "0xd773ba18a1ba8f020416638b5db8222d2dbd6306",
+    "address": "0x555dc79b42c404d53ad0e1a93585dba67dfe1bbe",
     "comment": "TEST blacklisted addr (test.com) this wallet collects funds from malicious wallets",
     "date": "2020-12-17"
 },
     {
-    "address": "0xdcd1a0dbd7c95cb40da847230d270fb5edbd33d9",
+    "address": "0x4cb3b1dc710fee9b8cdf62b8fbd2fbfc9f30d805",
+    "comment": "TEST blacklisted addr (test.com) this wallet collects funds from malicious wallets",
+    "date": "2020-07-14"
+},    {
+    "address": "0xA9dE8B7ffE9D1408f6d7d0976151Fb20534E3488",
     "comment": "TEST blacklisted addr (test.com) this wallet collects funds from malicious wallets",
     "date": "2020-07-14"
 }]
